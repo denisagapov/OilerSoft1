@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище OilerProjectModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CarSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdClient" Type="int" Nullable="false" />
+          <Property Name="Mark" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Model" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Color" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="GosNumber" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Engine" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="VinNumber" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ClientSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderSpareSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdSpare" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Services">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdClient" Type="int" Nullable="false" />
+          <Property Name="IdSpare" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Price" Type="float" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SpareSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCar" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Maker" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="Price" Type="float" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CarSet_ClientSet">
+          <End Role="ClientSet" Type="Self.ClientSet" Multiplicity="1" />
+          <End Role="CarSet" Type="Self.CarSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CarSet">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderSpareSet_SpareSet">
+          <End Role="SpareSet" Type="Self.SpareSet" Multiplicity="1" />
+          <End Role="OrderSpareSet" Type="Self.OrderSpareSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SpareSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderSpareSet">
+              <PropertyRef Name="IdSpare" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Services_ClientSet">
+          <End Role="ClientSet" Type="Self.ClientSet" Multiplicity="1" />
+          <End Role="Services" Type="Self.Services" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Services">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Services_SpareSet">
+          <End Role="SpareSet" Type="Self.SpareSet" Multiplicity="1" />
+          <End Role="Services" Type="Self.Services" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SpareSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Services">
+              <PropertyRef Name="IdSpare" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SpareSet_CarSet">
+          <End Role="CarSet" Type="Self.CarSet" Multiplicity="1" />
+          <End Role="SpareSet" Type="Self.SpareSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SpareSet">
+              <PropertyRef Name="IdCar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище OilerProjectModelContainer">
+          <EntitySet Name="CarSet" EntityType="Self.CarSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClientSet" EntityType="Self.ClientSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderSpareSet" EntityType="Self.OrderSpareSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SpareSet" EntityType="Self.SpareSet" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CarSet_ClientSet" Association="Self.FK_CarSet_ClientSet">
+            <End Role="ClientSet" EntitySet="ClientSet" />
+            <End Role="CarSet" EntitySet="CarSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderSpareSet_SpareSet" Association="Self.FK_OrderSpareSet_SpareSet">
+            <End Role="SpareSet" EntitySet="SpareSet" />
+            <End Role="OrderSpareSet" EntitySet="OrderSpareSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Services_ClientSet" Association="Self.FK_Services_ClientSet">
+            <End Role="ClientSet" EntitySet="ClientSet" />
+            <End Role="Services" EntitySet="Services" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Services_SpareSet" Association="Self.FK_Services_SpareSet">
+            <End Role="SpareSet" EntitySet="SpareSet" />
+            <End Role="Services" EntitySet="Services" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SpareSet_CarSet" Association="Self.FK_SpareSet_CarSet">
+            <End Role="CarSet" EntitySet="CarSet" />
+            <End Role="SpareSet" EntitySet="SpareSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OilerProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CarSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdClient" Type="Int32" Nullable="false" />
+          <Property Name="Mark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Color" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GosNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Engine" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VinNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ClientSet" Relationship="Self.FK_CarSet_ClientSet" FromRole="CarSet" ToRole="ClientSet" />
+          <NavigationProperty Name="SpareSet" Relationship="Self.FK_SpareSet_CarSet" FromRole="CarSet" ToRole="SpareSet" />
+        </EntityType>
+        <EntityType Name="ClientSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="CarSet" Relationship="Self.FK_CarSet_ClientSet" FromRole="ClientSet" ToRole="CarSet" />
+          <NavigationProperty Name="Services" Relationship="Self.FK_Services_ClientSet" FromRole="ClientSet" ToRole="Services" />
+        </EntityType>
+        <EntityType Name="OrderSpareSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdSpare" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="SpareSet" Relationship="Self.FK_OrderSpareSet_SpareSet" FromRole="OrderSpareSet" ToRole="SpareSet" />
+        </EntityType>
+        <EntityType Name="Services">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdClient" Type="Int32" Nullable="false" />
+          <Property Name="IdSpare" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="Double" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="ClientSet" Relationship="Self.FK_Services_ClientSet" FromRole="Services" ToRole="ClientSet" />
+          <NavigationProperty Name="SpareSet" Relationship="Self.FK_Services_SpareSet" FromRole="Services" ToRole="SpareSet" />
+        </EntityType>
+        <EntityType Name="SpareSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCar" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Maker" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Double" Nullable="false" />
+          <NavigationProperty Name="CarSet" Relationship="Self.FK_SpareSet_CarSet" FromRole="SpareSet" ToRole="CarSet" />
+          <NavigationProperty Name="OrderSpareSet" Relationship="Self.FK_OrderSpareSet_SpareSet" FromRole="SpareSet" ToRole="OrderSpareSet" />
+          <NavigationProperty Name="Services" Relationship="Self.FK_Services_SpareSet" FromRole="SpareSet" ToRole="Services" />
+        </EntityType>
+        <Association Name="FK_CarSet_ClientSet">
+          <End Role="ClientSet" Type="Self.ClientSet" Multiplicity="1" />
+          <End Role="CarSet" Type="Self.CarSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CarSet">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SpareSet_CarSet">
+          <End Role="CarSet" Type="Self.CarSet" Multiplicity="1" />
+          <End Role="SpareSet" Type="Self.SpareSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SpareSet">
+              <PropertyRef Name="IdCar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Services_ClientSet">
+          <End Role="ClientSet" Type="Self.ClientSet" Multiplicity="1" />
+          <End Role="Services" Type="Self.Services" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Services">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderSpareSet_SpareSet">
+          <End Role="SpareSet" Type="Self.SpareSet" Multiplicity="1" />
+          <End Role="OrderSpareSet" Type="Self.OrderSpareSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SpareSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderSpareSet">
+              <PropertyRef Name="IdSpare" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Services_SpareSet">
+          <End Role="SpareSet" Type="Self.SpareSet" Multiplicity="1" />
+          <End Role="Services" Type="Self.Services" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SpareSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Services">
+              <PropertyRef Name="IdSpare" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OilerProjectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CarSet" EntityType="Self.CarSet" />
+          <EntitySet Name="ClientSet" EntityType="Self.ClientSet" />
+          <EntitySet Name="OrderSpareSet" EntityType="Self.OrderSpareSet" />
+          <EntitySet Name="Services" EntityType="Self.Services" />
+          <EntitySet Name="SpareSet" EntityType="Self.SpareSet" />
+          <AssociationSet Name="FK_CarSet_ClientSet" Association="Self.FK_CarSet_ClientSet">
+            <End Role="ClientSet" EntitySet="ClientSet" />
+            <End Role="CarSet" EntitySet="CarSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SpareSet_CarSet" Association="Self.FK_SpareSet_CarSet">
+            <End Role="CarSet" EntitySet="CarSet" />
+            <End Role="SpareSet" EntitySet="SpareSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Services_ClientSet" Association="Self.FK_Services_ClientSet">
+            <End Role="ClientSet" EntitySet="ClientSet" />
+            <End Role="Services" EntitySet="Services" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderSpareSet_SpareSet" Association="Self.FK_OrderSpareSet_SpareSet">
+            <End Role="SpareSet" EntitySet="SpareSet" />
+            <End Role="OrderSpareSet" EntitySet="OrderSpareSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Services_SpareSet" Association="Self.FK_Services_SpareSet">
+            <End Role="SpareSet" EntitySet="SpareSet" />
+            <End Role="Services" EntitySet="Services" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище OilerProjectModelContainer" CdmEntityContainer="OilerProjectEntities">
+          <EntitySetMapping Name="CarSet">
+            <EntityTypeMapping TypeName="OilerProjectModel.CarSet">
+              <MappingFragment StoreEntitySet="CarSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="Mark" ColumnName="Mark" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="GosNumber" ColumnName="GosNumber" />
+                <ScalarProperty Name="Engine" ColumnName="Engine" />
+                <ScalarProperty Name="VinNumber" ColumnName="VinNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClientSet">
+            <EntityTypeMapping TypeName="OilerProjectModel.ClientSet">
+              <MappingFragment StoreEntitySet="ClientSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderSpareSet">
+            <EntityTypeMapping TypeName="OilerProjectModel.OrderSpareSet">
+              <MappingFragment StoreEntitySet="OrderSpareSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdSpare" ColumnName="IdSpare" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="OilerProjectModel.Services">
+              <MappingFragment StoreEntitySet="Services">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="IdSpare" ColumnName="IdSpare" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SpareSet">
+            <EntityTypeMapping TypeName="OilerProjectModel.SpareSet">
+              <MappingFragment StoreEntitySet="SpareSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdCar" ColumnName="IdCar" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Maker" ColumnName="Maker" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
