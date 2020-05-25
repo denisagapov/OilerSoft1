@@ -61,6 +61,12 @@
     <Compile Include="ClientSet.cs">
       <DependentUpon>ModelOiler.tt</DependentUpon>
     </Compile>
+    <Compile Include="FormAuthorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuthorization.Designer.cs">
+      <DependentUpon>FormAuthorization.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCarRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,18 @@
     </Compile>
     <Compile Include="FormClients.Designer.cs">
       <DependentUpon>FormClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrder.Designer.cs">
+      <DependentUpon>FormOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServices.Designer.cs">
+      <DependentUpon>FormServices.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSpare.cs">
       <SubType>Form</SubType>
@@ -111,11 +129,23 @@
     <Compile Include="SpareSet.cs">
       <DependentUpon>ModelOiler.tt</DependentUpon>
     </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>ModelOiler.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormAuthorization.resx">
+      <DependentUpon>FormAuthorization.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCarRegistration.resx">
       <DependentUpon>FormCarRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormClients.resx">
       <DependentUpon>FormClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrder.resx">
+      <DependentUpon>FormOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServices.resx">
+      <DependentUpon>FormServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSpare.resx">
       <DependentUpon>FormSpare.cs</DependentUpon>

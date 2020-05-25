@@ -30,5 +30,6 @@ namespace OilerSoft
         public virtual DbSet<OrderSpareSet> OrderSpareSet { get; set; }
         public virtual DbSet<Services> Services { get; set; }
         public virtual DbSet<SpareSet> SpareSet { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }

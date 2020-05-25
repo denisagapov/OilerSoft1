@@ -56,141 +56,182 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 15);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(15, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Клиент";
             // 
             // textBoxMark
             // 
-            this.textBoxMark.Location = new System.Drawing.Point(16, 74);
+            this.textBoxMark.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxMark.Location = new System.Drawing.Point(18, 85);
+            this.textBoxMark.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxMark.Name = "textBoxMark";
-            this.textBoxMark.Size = new System.Drawing.Size(160, 20);
+            this.textBoxMark.Size = new System.Drawing.Size(186, 21);
             this.textBoxMark.TabIndex = 0;
+            this.textBoxMark.TabStop = false;
             // 
             // labelMark
             // 
             this.labelMark.AutoSize = true;
-            this.labelMark.Location = new System.Drawing.Point(13, 58);
+            this.labelMark.ForeColor = System.Drawing.Color.White;
+            this.labelMark.Location = new System.Drawing.Point(15, 67);
+            this.labelMark.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMark.Name = "labelMark";
-            this.labelMark.Size = new System.Drawing.Size(104, 13);
+            this.labelMark.Size = new System.Drawing.Size(120, 15);
             this.labelMark.TabIndex = 1;
             this.labelMark.Text = "Марка автомобиля";
             // 
             // textBoxModel
             // 
-            this.textBoxModel.Location = new System.Drawing.Point(16, 117);
+            this.textBoxModel.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxModel.Location = new System.Drawing.Point(18, 135);
+            this.textBoxModel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxModel.Name = "textBoxModel";
-            this.textBoxModel.Size = new System.Drawing.Size(160, 20);
+            this.textBoxModel.Size = new System.Drawing.Size(186, 21);
             this.textBoxModel.TabIndex = 0;
+            this.textBoxModel.TabStop = false;
             // 
             // labelModel
             // 
             this.labelModel.AutoSize = true;
-            this.labelModel.Location = new System.Drawing.Point(13, 101);
+            this.labelModel.ForeColor = System.Drawing.Color.White;
+            this.labelModel.Location = new System.Drawing.Point(15, 116);
+            this.labelModel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelModel.Name = "labelModel";
-            this.labelModel.Size = new System.Drawing.Size(110, 13);
+            this.labelModel.Size = new System.Drawing.Size(128, 15);
             this.labelModel.TabIndex = 1;
             this.labelModel.Text = "Модель автомобиля";
             // 
             // textBoxYear
             // 
-            this.textBoxYear.Location = new System.Drawing.Point(194, 31);
+            this.textBoxYear.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxYear.Location = new System.Drawing.Point(227, 36);
+            this.textBoxYear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxYear.Name = "textBoxYear";
-            this.textBoxYear.Size = new System.Drawing.Size(160, 20);
+            this.textBoxYear.Size = new System.Drawing.Size(186, 21);
             this.textBoxYear.TabIndex = 0;
+            this.textBoxYear.TabStop = false;
+            this.textBoxYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxYear_KeyPress);
             // 
             // labelYear
             // 
             this.labelYear.AutoSize = true;
-            this.labelYear.Location = new System.Drawing.Point(191, 15);
+            this.labelYear.ForeColor = System.Drawing.Color.White;
+            this.labelYear.Location = new System.Drawing.Point(223, 17);
+            this.labelYear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelYear.Name = "labelYear";
-            this.labelYear.Size = new System.Drawing.Size(71, 13);
+            this.labelYear.Size = new System.Drawing.Size(78, 15);
             this.labelYear.TabIndex = 1;
             this.labelYear.Text = "Год выпуска";
             // 
             // textBoxColor
             // 
-            this.textBoxColor.Location = new System.Drawing.Point(194, 74);
+            this.textBoxColor.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxColor.Location = new System.Drawing.Point(227, 85);
+            this.textBoxColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxColor.Name = "textBoxColor";
-            this.textBoxColor.Size = new System.Drawing.Size(160, 20);
+            this.textBoxColor.Size = new System.Drawing.Size(186, 21);
             this.textBoxColor.TabIndex = 0;
+            this.textBoxColor.TabStop = false;
             // 
             // labelColor
             // 
             this.labelColor.AutoSize = true;
-            this.labelColor.Location = new System.Drawing.Point(191, 58);
+            this.labelColor.ForeColor = System.Drawing.Color.White;
+            this.labelColor.Location = new System.Drawing.Point(223, 67);
+            this.labelColor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelColor.Name = "labelColor";
-            this.labelColor.Size = new System.Drawing.Size(32, 13);
+            this.labelColor.Size = new System.Drawing.Size(37, 15);
             this.labelColor.TabIndex = 1;
             this.labelColor.Text = "Цвет";
             // 
             // textBoxNumber
             // 
-            this.textBoxNumber.Location = new System.Drawing.Point(194, 118);
+            this.textBoxNumber.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxNumber.Location = new System.Drawing.Point(227, 136);
+            this.textBoxNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxNumber.Name = "textBoxNumber";
-            this.textBoxNumber.Size = new System.Drawing.Size(160, 20);
+            this.textBoxNumber.Size = new System.Drawing.Size(186, 21);
             this.textBoxNumber.TabIndex = 0;
+            this.textBoxNumber.TabStop = false;
             // 
             // labelNumber
             // 
             this.labelNumber.AutoSize = true;
-            this.labelNumber.Location = new System.Drawing.Point(191, 102);
+            this.labelNumber.ForeColor = System.Drawing.Color.White;
+            this.labelNumber.Location = new System.Drawing.Point(223, 118);
+            this.labelNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNumber.Name = "labelNumber";
-            this.labelNumber.Size = new System.Drawing.Size(63, 13);
+            this.labelNumber.Size = new System.Drawing.Size(70, 15);
             this.labelNumber.TabIndex = 1;
             this.labelNumber.Text = "Гос. номер";
             // 
             // textBoxEngine
             // 
-            this.textBoxEngine.Location = new System.Drawing.Point(371, 30);
+            this.textBoxEngine.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxEngine.Location = new System.Drawing.Point(433, 35);
+            this.textBoxEngine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxEngine.Name = "textBoxEngine";
-            this.textBoxEngine.Size = new System.Drawing.Size(160, 20);
+            this.textBoxEngine.Size = new System.Drawing.Size(186, 21);
             this.textBoxEngine.TabIndex = 0;
+            this.textBoxEngine.TabStop = false;
             // 
             // labelEngine
             // 
             this.labelEngine.AutoSize = true;
-            this.labelEngine.Location = new System.Drawing.Point(368, 14);
+            this.labelEngine.ForeColor = System.Drawing.Color.White;
+            this.labelEngine.Location = new System.Drawing.Point(430, 16);
+            this.labelEngine.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEngine.Name = "labelEngine";
-            this.labelEngine.Size = new System.Drawing.Size(81, 13);
+            this.labelEngine.Size = new System.Drawing.Size(92, 15);
             this.labelEngine.TabIndex = 1;
             this.labelEngine.Text = "Тип двигателя";
             // 
             // textBoxVin
             // 
-            this.textBoxVin.Location = new System.Drawing.Point(371, 74);
+            this.textBoxVin.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxVin.Location = new System.Drawing.Point(433, 85);
+            this.textBoxVin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxVin.Name = "textBoxVin";
-            this.textBoxVin.Size = new System.Drawing.Size(160, 20);
+            this.textBoxVin.Size = new System.Drawing.Size(186, 21);
             this.textBoxVin.TabIndex = 0;
+            this.textBoxVin.TabStop = false;
             // 
             // labelVin
             // 
             this.labelVin.AutoSize = true;
-            this.labelVin.Location = new System.Drawing.Point(368, 58);
+            this.labelVin.ForeColor = System.Drawing.Color.White;
+            this.labelVin.Location = new System.Drawing.Point(430, 67);
+            this.labelVin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelVin.Name = "labelVin";
-            this.labelVin.Size = new System.Drawing.Size(60, 13);
+            this.labelVin.Size = new System.Drawing.Size(66, 15);
             this.labelVin.TabIndex = 1;
             this.labelVin.Text = "VIN номер";
             // 
             // comboBoxClient
             // 
+            this.comboBoxClient.BackColor = System.Drawing.SystemColors.Window;
             this.comboBoxClient.FormattingEnabled = true;
-            this.comboBoxClient.Location = new System.Drawing.Point(16, 34);
+            this.comboBoxClient.Location = new System.Drawing.Point(18, 39);
+            this.comboBoxClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(160, 21);
+            this.comboBoxClient.Size = new System.Drawing.Size(186, 23);
             this.comboBoxClient.TabIndex = 2;
+            this.comboBoxClient.TabStop = false;
             // 
             // listViewCarRegistration
             // 
@@ -208,11 +249,13 @@
             this.listViewCarRegistration.FullRowSelect = true;
             this.listViewCarRegistration.GridLines = true;
             this.listViewCarRegistration.HideSelection = false;
-            this.listViewCarRegistration.Location = new System.Drawing.Point(16, 155);
+            this.listViewCarRegistration.Location = new System.Drawing.Point(18, 179);
+            this.listViewCarRegistration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listViewCarRegistration.MultiSelect = false;
             this.listViewCarRegistration.Name = "listViewCarRegistration";
-            this.listViewCarRegistration.Size = new System.Drawing.Size(895, 221);
+            this.listViewCarRegistration.Size = new System.Drawing.Size(836, 254);
             this.listViewCarRegistration.TabIndex = 3;
+            this.listViewCarRegistration.TabStop = false;
             this.listViewCarRegistration.UseCompatibleStateImageBehavior = false;
             this.listViewCarRegistration.View = System.Windows.Forms.View.Details;
             this.listViewCarRegistration.SelectedIndexChanged += new System.EventHandler(this.listViewCarRegistration_SelectedIndexChanged);
@@ -261,77 +304,82 @@
             // columnHeader10
             // 
             this.columnHeader10.Text = "VIN";
-            this.columnHeader10.Width = 241;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OilerSoft.Properties.Resources.imgonline_com_ua_Transparent_backgr_rITe6ZcDdlYY1Of_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(582, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(271, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.columnHeader10.Width = 184;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.BackColor = System.Drawing.Color.Tomato;
-            this.buttonAdd.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.buttonAdd.FlatAppearance.BorderSize = 0;
+            this.buttonAdd.BackColor = System.Drawing.Color.SlateBlue;
+            this.buttonAdd.FlatAppearance.BorderColor = System.Drawing.SystemColors.Desktop;
+            this.buttonAdd.FlatAppearance.BorderSize = 2;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonAdd.Location = new System.Drawing.Point(449, 394);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(15);
+            this.buttonAdd.Location = new System.Drawing.Point(315, 454);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(18, 17, 18, 17);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonAdd.Size = new System.Drawing.Size(134, 48);
+            this.buttonAdd.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.buttonAdd.Size = new System.Drawing.Size(157, 55);
             this.buttonAdd.TabIndex = 5;
+            this.buttonAdd.TabStop = false;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonEdit
             // 
-            this.buttonEdit.BackColor = System.Drawing.Color.Tomato;
-            this.buttonEdit.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.buttonEdit.FlatAppearance.BorderSize = 0;
+            this.buttonEdit.BackColor = System.Drawing.Color.SlateBlue;
+            this.buttonEdit.FlatAppearance.BorderColor = System.Drawing.SystemColors.Desktop;
+            this.buttonEdit.FlatAppearance.BorderSize = 2;
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonEdit.Location = new System.Drawing.Point(613, 394);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(15);
+            this.buttonEdit.Location = new System.Drawing.Point(506, 454);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(18, 17, 18, 17);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonEdit.Size = new System.Drawing.Size(134, 48);
+            this.buttonEdit.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.buttonEdit.Size = new System.Drawing.Size(157, 55);
             this.buttonEdit.TabIndex = 6;
+            this.buttonEdit.TabStop = false;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDel
             // 
-            this.buttonDel.BackColor = System.Drawing.Color.Tomato;
-            this.buttonDel.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.buttonDel.FlatAppearance.BorderSize = 0;
+            this.buttonDel.BackColor = System.Drawing.Color.SlateBlue;
+            this.buttonDel.FlatAppearance.BorderColor = System.Drawing.SystemColors.Desktop;
+            this.buttonDel.FlatAppearance.BorderSize = 2;
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonDel.Location = new System.Drawing.Point(777, 394);
-            this.buttonDel.Margin = new System.Windows.Forms.Padding(15);
+            this.buttonDel.Location = new System.Drawing.Point(697, 454);
+            this.buttonDel.Margin = new System.Windows.Forms.Padding(18, 17, 18, 17);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonDel.Size = new System.Drawing.Size(134, 48);
+            this.buttonDel.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.buttonDel.Size = new System.Drawing.Size(157, 55);
             this.buttonDel.TabIndex = 7;
+            this.buttonDel.TabStop = false;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::OilerSoft.Properties.Resources.imgonline_com_ua_Transparent_backgr_rITe6ZcDdlYY1Of_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(646, 19);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 114);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormCarRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 454);
+            this.BackColor = System.Drawing.Color.BlueViolet;
+            this.ClientSize = new System.Drawing.Size(875, 524);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonDel);
@@ -353,8 +401,11 @@
             this.Controls.Add(this.textBoxYear);
             this.Controls.Add(this.textBoxModel);
             this.Controls.Add(this.textBoxMark);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormCarRegistration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация автомобиля";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

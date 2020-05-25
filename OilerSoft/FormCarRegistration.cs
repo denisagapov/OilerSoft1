@@ -146,5 +146,14 @@ namespace OilerSoft
                 MessageBox.Show("Невозможно удалить, эта запись используется", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void textBoxYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

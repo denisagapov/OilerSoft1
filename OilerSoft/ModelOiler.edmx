@@ -58,6 +58,15 @@
           <Property Name="Count" Type="int" Nullable="false" />
           <Property Name="Price" Type="float" Nullable="false" />
         </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
         <Association Name="FK_CarSet_ClientSet">
           <End Role="ClientSet" Type="Self.ClientSet" Multiplicity="1" />
           <End Role="CarSet" Type="Self.CarSet" Multiplicity="*" />
@@ -124,6 +133,7 @@
           <EntitySet Name="OrderSpareSet" EntityType="Self.OrderSpareSet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SpareSet" EntityType="Self.SpareSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_CarSet_ClientSet" Association="Self.FK_CarSet_ClientSet">
             <End Role="ClientSet" EntitySet="ClientSet" />
             <End Role="CarSet" EntitySet="CarSet" />
@@ -213,6 +223,15 @@
           <NavigationProperty Name="OrderSpareSet" Relationship="Self.FK_OrderSpareSet_SpareSet" FromRole="SpareSet" ToRole="OrderSpareSet" />
           <NavigationProperty Name="Services" Relationship="Self.FK_Services_SpareSet" FromRole="SpareSet" ToRole="Services" />
         </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
         <Association Name="FK_CarSet_ClientSet">
           <End Role="ClientSet" Type="Self.ClientSet" Multiplicity="1" />
           <End Role="CarSet" Type="Self.CarSet" Multiplicity="*" />
@@ -279,6 +298,7 @@
           <EntitySet Name="OrderSpareSet" EntityType="Self.OrderSpareSet" />
           <EntitySet Name="Services" EntityType="Self.Services" />
           <EntitySet Name="SpareSet" EntityType="Self.SpareSet" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
           <AssociationSet Name="FK_CarSet_ClientSet" Association="Self.FK_CarSet_ClientSet">
             <End Role="ClientSet" EntitySet="ClientSet" />
             <End Role="CarSet" EntitySet="CarSet" />
@@ -361,6 +381,16 @@
                 <ScalarProperty Name="Maker" ColumnName="Maker" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="OilerProjectModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

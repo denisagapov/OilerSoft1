@@ -4,12 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9b9e47e7f4b94ed8a409a93510f8143c" Name="Diagram1">
+      <Diagram DiagramId="52b597287b904438851182ac1a6f8354" Name="Diagram1">
         <EntityTypeShape EntityType="OilerProjectModel.CarSet" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="OilerProjectModel.ClientSet" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="OilerProjectModel.OrderSpareSet" Width="1.5" PointX="7.5" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="OilerProjectModel.Services" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="OilerProjectModel.SpareSet" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OilerProjectModel.Users" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
         <AssociationConnector Association="OilerProjectModel.FK_CarSet_ClientSet" ManuallyRouted="false" />
         <AssociationConnector Association="OilerProjectModel.FK_SpareSet_CarSet" ManuallyRouted="false" />
         <AssociationConnector Association="OilerProjectModel.FK_Services_ClientSet" ManuallyRouted="false" />
