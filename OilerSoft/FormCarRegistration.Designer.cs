@@ -78,9 +78,10 @@
             // 
             this.textBoxMark.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxMark.Location = new System.Drawing.Point(18, 85);
-            this.textBoxMark.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMark.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxMark.Multiline = true;
             this.textBoxMark.Name = "textBoxMark";
-            this.textBoxMark.Size = new System.Drawing.Size(186, 21);
+            this.textBoxMark.Size = new System.Drawing.Size(186, 24);
             this.textBoxMark.TabIndex = 0;
             this.textBoxMark.TabStop = false;
             // 
@@ -99,9 +100,10 @@
             // 
             this.textBoxModel.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxModel.Location = new System.Drawing.Point(18, 135);
-            this.textBoxModel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxModel.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxModel.Multiline = true;
             this.textBoxModel.Name = "textBoxModel";
-            this.textBoxModel.Size = new System.Drawing.Size(186, 21);
+            this.textBoxModel.Size = new System.Drawing.Size(186, 24);
             this.textBoxModel.TabIndex = 0;
             this.textBoxModel.TabStop = false;
             // 
@@ -120,9 +122,10 @@
             // 
             this.textBoxYear.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxYear.Location = new System.Drawing.Point(227, 36);
-            this.textBoxYear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxYear.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxYear.Multiline = true;
             this.textBoxYear.Name = "textBoxYear";
-            this.textBoxYear.Size = new System.Drawing.Size(186, 21);
+            this.textBoxYear.Size = new System.Drawing.Size(186, 24);
             this.textBoxYear.TabIndex = 0;
             this.textBoxYear.TabStop = false;
             this.textBoxYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxYear_KeyPress);
@@ -142,9 +145,10 @@
             // 
             this.textBoxColor.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxColor.Location = new System.Drawing.Point(227, 85);
-            this.textBoxColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxColor.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxColor.Multiline = true;
             this.textBoxColor.Name = "textBoxColor";
-            this.textBoxColor.Size = new System.Drawing.Size(186, 21);
+            this.textBoxColor.Size = new System.Drawing.Size(186, 24);
             this.textBoxColor.TabIndex = 0;
             this.textBoxColor.TabStop = false;
             // 
@@ -163,9 +167,10 @@
             // 
             this.textBoxNumber.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxNumber.Location = new System.Drawing.Point(227, 136);
-            this.textBoxNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNumber.Multiline = true;
             this.textBoxNumber.Name = "textBoxNumber";
-            this.textBoxNumber.Size = new System.Drawing.Size(186, 21);
+            this.textBoxNumber.Size = new System.Drawing.Size(186, 24);
             this.textBoxNumber.TabIndex = 0;
             this.textBoxNumber.TabStop = false;
             // 
@@ -184,9 +189,10 @@
             // 
             this.textBoxEngine.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxEngine.Location = new System.Drawing.Point(433, 35);
-            this.textBoxEngine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEngine.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxEngine.Multiline = true;
             this.textBoxEngine.Name = "textBoxEngine";
-            this.textBoxEngine.Size = new System.Drawing.Size(186, 21);
+            this.textBoxEngine.Size = new System.Drawing.Size(186, 24);
             this.textBoxEngine.TabIndex = 0;
             this.textBoxEngine.TabStop = false;
             // 
@@ -205,9 +211,10 @@
             // 
             this.textBoxVin.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxVin.Location = new System.Drawing.Point(433, 85);
-            this.textBoxVin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxVin.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxVin.Multiline = true;
             this.textBoxVin.Name = "textBoxVin";
-            this.textBoxVin.Size = new System.Drawing.Size(186, 21);
+            this.textBoxVin.Size = new System.Drawing.Size(186, 24);
             this.textBoxVin.TabIndex = 0;
             this.textBoxVin.TabStop = false;
             // 
@@ -227,7 +234,7 @@
             this.comboBoxClient.BackColor = System.Drawing.SystemColors.Window;
             this.comboBoxClient.FormattingEnabled = true;
             this.comboBoxClient.Location = new System.Drawing.Point(18, 39);
-            this.comboBoxClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxClient.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxClient.Name = "comboBoxClient";
             this.comboBoxClient.Size = new System.Drawing.Size(186, 23);
             this.comboBoxClient.TabIndex = 2;
@@ -250,7 +257,7 @@
             this.listViewCarRegistration.GridLines = true;
             this.listViewCarRegistration.HideSelection = false;
             this.listViewCarRegistration.Location = new System.Drawing.Point(18, 179);
-            this.listViewCarRegistration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listViewCarRegistration.Margin = new System.Windows.Forms.Padding(4);
             this.listViewCarRegistration.MultiSelect = false;
             this.listViewCarRegistration.Name = "listViewCarRegistration";
             this.listViewCarRegistration.Size = new System.Drawing.Size(836, 254);
@@ -315,10 +322,10 @@
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonAdd.Location = new System.Drawing.Point(315, 454);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(18, 17, 18, 17);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(15);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
-            this.buttonAdd.Size = new System.Drawing.Size(157, 55);
+            this.buttonAdd.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonAdd.Size = new System.Drawing.Size(157, 48);
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.TabStop = false;
             this.buttonAdd.Text = "Добавить";
@@ -334,10 +341,10 @@
             this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonEdit.Location = new System.Drawing.Point(506, 454);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(18, 17, 18, 17);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(15);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
-            this.buttonEdit.Size = new System.Drawing.Size(157, 55);
+            this.buttonEdit.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonEdit.Size = new System.Drawing.Size(157, 48);
             this.buttonEdit.TabIndex = 6;
             this.buttonEdit.TabStop = false;
             this.buttonEdit.Text = "Изменить";
@@ -353,10 +360,10 @@
             this.buttonDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonDel.Location = new System.Drawing.Point(697, 454);
-            this.buttonDel.Margin = new System.Windows.Forms.Padding(18, 17, 18, 17);
+            this.buttonDel.Margin = new System.Windows.Forms.Padding(15);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
-            this.buttonDel.Size = new System.Drawing.Size(157, 55);
+            this.buttonDel.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonDel.Size = new System.Drawing.Size(157, 48);
             this.buttonDel.TabIndex = 7;
             this.buttonDel.TabStop = false;
             this.buttonDel.Text = "Удалить";
@@ -403,7 +410,7 @@
             this.Controls.Add(this.textBoxMark);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCarRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация автомобиля";

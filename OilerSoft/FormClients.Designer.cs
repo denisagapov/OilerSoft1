@@ -89,8 +89,9 @@
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(26, 30);
+            this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(269, 21);
+            this.textBoxName.Size = new System.Drawing.Size(269, 24);
             this.textBoxName.TabIndex = 1;
             this.textBoxName.TabStop = false;
             // 
@@ -106,16 +107,18 @@
             // textBoxAddress
             // 
             this.textBoxAddress.Location = new System.Drawing.Point(26, 78);
+            this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(269, 21);
+            this.textBoxAddress.Size = new System.Drawing.Size(269, 24);
             this.textBoxAddress.TabIndex = 1;
             this.textBoxAddress.TabStop = false;
             // 
             // textBoxPhone
             // 
             this.textBoxPhone.Location = new System.Drawing.Point(26, 130);
+            this.textBoxPhone.Multiline = true;
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(269, 21);
+            this.textBoxPhone.Size = new System.Drawing.Size(269, 24);
             this.textBoxPhone.TabIndex = 1;
             this.textBoxPhone.TabStop = false;
             this.textBoxPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhone_KeyPress);
@@ -157,10 +160,10 @@
             this.buttonDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonDel.Location = new System.Drawing.Point(695, 258);
-            this.buttonDel.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.buttonDel.Margin = new System.Windows.Forms.Padding(15);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
-            this.buttonDel.Size = new System.Drawing.Size(156, 55);
+            this.buttonDel.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonDel.Size = new System.Drawing.Size(156, 48);
             this.buttonDel.TabIndex = 4;
             this.buttonDel.TabStop = false;
             this.buttonDel.Text = "Удалить";
@@ -176,10 +179,10 @@
             this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonEdit.Location = new System.Drawing.Point(504, 258);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(15);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
-            this.buttonEdit.Size = new System.Drawing.Size(156, 55);
+            this.buttonEdit.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonEdit.Size = new System.Drawing.Size(156, 48);
             this.buttonEdit.TabIndex = 4;
             this.buttonEdit.TabStop = false;
             this.buttonEdit.Text = "Изменить";
@@ -195,10 +198,10 @@
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonAdd.Location = new System.Drawing.Point(312, 258);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(15);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
-            this.buttonAdd.Size = new System.Drawing.Size(156, 55);
+            this.buttonAdd.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonAdd.Size = new System.Drawing.Size(156, 48);
             this.buttonAdd.TabIndex = 4;
             this.buttonAdd.TabStop = false;
             this.buttonAdd.Text = "Добавить";

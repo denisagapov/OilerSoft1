@@ -43,8 +43,9 @@
             // textBoxLogin
             // 
             this.textBoxLogin.Location = new System.Drawing.Point(81, 63);
+            this.textBoxLogin.Multiline = true;
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(224, 21);
+            this.textBoxLogin.Size = new System.Drawing.Size(224, 24);
             this.textBoxLogin.TabIndex = 0;
             this.textBoxLogin.TabStop = false;
             // 
@@ -91,8 +92,9 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(81, 111);
+            this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(224, 21);
+            this.textBoxPassword.Size = new System.Drawing.Size(224, 24);
             this.textBoxPassword.TabIndex = 0;
             this.textBoxPassword.TabStop = false;
             this.textBoxPassword.UseSystemPasswordChar = true;
@@ -106,10 +108,10 @@
             this.buttonOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOk.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonOk.Location = new System.Drawing.Point(40, 152);
-            this.buttonOk.Margin = new System.Windows.Forms.Padding(20);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Padding = new System.Windows.Forms.Padding(14);
-            this.buttonOk.Size = new System.Drawing.Size(111, 63);
+            this.buttonOk.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonOk.Size = new System.Drawing.Size(111, 48);
             this.buttonOk.TabIndex = 5;
             this.buttonOk.TabStop = false;
             this.buttonOk.Text = "Войти";
@@ -125,10 +127,10 @@
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCancel.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonCancel.Location = new System.Drawing.Point(208, 152);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(20);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(15);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Padding = new System.Windows.Forms.Padding(14);
-            this.buttonCancel.Size = new System.Drawing.Size(111, 63);
+            this.buttonCancel.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonCancel.Size = new System.Drawing.Size(111, 48);
             this.buttonCancel.TabIndex = 6;
             this.buttonCancel.TabStop = false;
             this.buttonCancel.Text = "Отмена";

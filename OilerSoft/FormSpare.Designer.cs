@@ -125,8 +125,9 @@
             // textBoxNameSpare
             // 
             this.textBoxNameSpare.Location = new System.Drawing.Point(14, 72);
+            this.textBoxNameSpare.Multiline = true;
             this.textBoxNameSpare.Name = "textBoxNameSpare";
-            this.textBoxNameSpare.Size = new System.Drawing.Size(144, 21);
+            this.textBoxNameSpare.Size = new System.Drawing.Size(144, 24);
             this.textBoxNameSpare.TabIndex = 1;
             this.textBoxNameSpare.TabStop = false;
             // 
@@ -142,8 +143,9 @@
             // textBoxMaker
             // 
             this.textBoxMaker.Location = new System.Drawing.Point(14, 119);
+            this.textBoxMaker.Multiline = true;
             this.textBoxMaker.Name = "textBoxMaker";
-            this.textBoxMaker.Size = new System.Drawing.Size(144, 21);
+            this.textBoxMaker.Size = new System.Drawing.Size(144, 24);
             this.textBoxMaker.TabIndex = 1;
             this.textBoxMaker.TabStop = false;
             // 
@@ -159,8 +161,9 @@
             // textBoxCount
             // 
             this.textBoxCount.Location = new System.Drawing.Point(14, 165);
+            this.textBoxCount.Multiline = true;
             this.textBoxCount.Name = "textBoxCount";
-            this.textBoxCount.Size = new System.Drawing.Size(144, 21);
+            this.textBoxCount.Size = new System.Drawing.Size(144, 24);
             this.textBoxCount.TabIndex = 1;
             this.textBoxCount.TabStop = false;
             // 
@@ -176,7 +179,7 @@
             // comboBoxCar
             // 
             this.comboBoxCar.FormattingEnabled = true;
-            this.comboBoxCar.Location = new System.Drawing.Point(17, 30);
+            this.comboBoxCar.Location = new System.Drawing.Point(14, 30);
             this.comboBoxCar.Name = "comboBoxCar";
             this.comboBoxCar.Size = new System.Drawing.Size(140, 23);
             this.comboBoxCar.TabIndex = 4;
@@ -185,8 +188,9 @@
             // textBoxPrice
             // 
             this.textBoxPrice.Location = new System.Drawing.Point(14, 210);
+            this.textBoxPrice.Multiline = true;
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(144, 21);
+            this.textBoxPrice.Size = new System.Drawing.Size(144, 24);
             this.textBoxPrice.TabIndex = 1;
             this.textBoxPrice.TabStop = false;
             // 
@@ -208,10 +212,10 @@
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonAdd.Location = new System.Drawing.Point(164, 254);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(15);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
-            this.buttonAdd.Size = new System.Drawing.Size(156, 55);
+            this.buttonAdd.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonAdd.Size = new System.Drawing.Size(156, 48);
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.TabStop = false;
             this.buttonAdd.Text = "Добавить";
@@ -227,10 +231,10 @@
             this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.buttonEdit.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonEdit.Location = new System.Drawing.Point(356, 254);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(15);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
-            this.buttonEdit.Size = new System.Drawing.Size(156, 55);
+            this.buttonEdit.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonEdit.Size = new System.Drawing.Size(156, 48);
             this.buttonEdit.TabIndex = 6;
             this.buttonEdit.TabStop = false;
             this.buttonEdit.Text = "Изменить";
@@ -246,10 +250,10 @@
             this.buttonDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.buttonDel.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonDel.Location = new System.Drawing.Point(547, 254);
-            this.buttonDel.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.buttonDel.Margin = new System.Windows.Forms.Padding(15);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
-            this.buttonDel.Size = new System.Drawing.Size(156, 55);
+            this.buttonDel.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonDel.Size = new System.Drawing.Size(156, 48);
             this.buttonDel.TabIndex = 7;
             this.buttonDel.TabStop = false;
             this.buttonDel.Text = "Удалить";
